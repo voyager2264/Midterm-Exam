@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Workshop: Online Garage Sale</title>
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guided worksheet for GHC 2018: Developing Screen-Reader-Friendly Websites">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script> 
+  </head>
+  <body>
+    <div id="pagebody" class="pagebody">
+      <main class="main">
+        <!-- Your code here; start of editable section. -->
+        <div class="header">
+          <h1 class="siteTitle" id="siteTitle">
+            Online Garage Sale
+          </h1>
+        </div>
+        <div class="mainContent" id="mainContent" tabindex="-1"
+            aria-labelledby="siteTitle">
+          <div class="orderFormSection">
+            <h2>
+              Decorations
+            </h2>
+            <h3>
+              Spice up your home with these decorative items!
+            </h3>
+            <div class="orderFormItemsContainer">
+              <div class="imageContainer" tabindex="0">
+                <img class="image" src="other-files/images/elephant.jpeg" alt="Purple elephant figurine" />
+                <div class="imageLabel">
+                  Elephant Figurine - $20
+                </div>
+                <button class="buyButton button">BUY</button>
+              </div>
+              <div class="imageContainer" tabindex="0">
+                <img class="image" src="other-files/images/jar.jpeg" alt="Blue and purple hand painted jar" />
+                <div class="saleLabel">
+                  SALE
+                </div>
+                <div class="imageLabel">
+                  Hand Painted Jar - $5.50
+                </div>
+                <button class="buyButton button">
+                  BUY
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="orderFormSection">
+            <h2>
+              Toys
+            </h2>
+            <h3>
+              Endless fun with these toys - great for kids!
+            </h3>
+            <div class="orderFormItemsContainer">
+              <div class="imageContainer" tabindex="0">
+                <img class="image" src="other-files/images/blocks.jpeg" alt="Multi-colored building blocks" />
+                <div class="imageLabel">
+                  Stacks of Building Blocks - $2.50
+                </div>
+                <button class="buyButton button">BUY</button>
+              </div>
+              <div class="imageContainer" tabindex="0">
+                <img class="image" src="other-files/images/dice.jpeg" alt="Colorful piles of dice" />
+                <div class="saleLabel">SALE</div>
+                <div class="imageLabel">
+                  Piles of Dice - $0.50
+                </div>
+                <button class="buyButton button">BUY</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- This div functions as a modal dialog that pops up when the user clicks the "BUY" button on an item. -->
+        <div class="buyDialog isHidden" id="buyDialog" role="dialog" 
+            aria-labelledby="dialogTitle" tabindex="-1">
+          <div class="buyDialogContent">
+            <button class="dialogCloseButton" id="dialogCloseButton" aria-label="Close dialog">
+              <svg x="0px" y="0px" viewBox="0 0 96 96" enable-background="new 0 0 96 96">
+                <polygon points="96,14 82,0 48,34 14,0 0,14 34,48 0,82 14,96 48,62 82,96 96,82 62,48 "/>
+              </svg>
+            </button>
+            <h2 id="dialogTitle">
+              Buy this item
+            </h2>
+            <div class="inputRow">
+              <label>Quantity: <input type="number" /></label>
+            </div>
+            <div class="inputRow">
+              <label>Name: <input type="text" /></label>
+            </div>
+            <div class="inputRow">
+              <label>Email: <input type="email" /></label>
+            </div>
+            <button class="submitButton button" id="submitButton">
+              SUBMIT
+            </button>
+            <div class="tabs">
+              <div class="tablist" role="tablist" aria-label="Item details">
+                <button id="description" class="tab selected" role="tab"
+                    aria-selected="true" aria-controls="description-tab">
+                  Description
+                </button>
+                <button id="details" class="tab" role="tab"
+                    aria-selected="false" aria-controls="details-tab">
+                  Details
+                </button>
+                <button id="returns" class="tab" role="tab"
+                    aria-selected="false" aria-controls="returns-tab">
+                  Returns
+                </button>
+              </div>
+              <div id="description-tab" class="tabpanel" role="tabpanel" aria-labelledby="description">
+                <p>
+                  This is a really great product!
+                </p>
+              </div>
+              <div id="details-tab" class="tabpanel" role="tabpanel" aria-labelledby="details">
+                <p>
+                  This product is 1 inch x 3 inches and weighs 10 grams.
+                </p>
+              </div>
+              <div id="returns-tab" class="tabpanel" role="tabpanel" aria-labelledby="returns">
+                <p>
+                  Unfortunately, we do not allow returns or exchanges.
+                </p>
+              </div>
+            </div>
+            <div id="wrapTarget" tabindex="-1"></div>
+          </div>
+        </div>
+      </main>
+      <!-- End of editable section. -->
+    </div>
+    <!-- This loads the screeenreader; ignore everything past this point -->
+    <script src="other-files/screenreader/cvoxembed.js"></script>
+  </body>
+</html>
