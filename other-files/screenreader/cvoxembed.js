@@ -57,7 +57,7 @@ class CvoxPageManager {
     this.embed.updateSelectedVoiceOnLanguageUpdate(
         document.documentElement.lang);
     this.replaceStubsWithRealImplementation();
-}, 300);
+}, 1000);
   }
 
   wrapBodyContents() {
