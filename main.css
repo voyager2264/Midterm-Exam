@@ -2,7 +2,11 @@ ul.datatarget {
     list-style-type: none;
 }
 
-/* No need to modify the CSS below. */
+.link {
+    color: blue;
+    text-decoration: underline;
+}
+
 body {
   display: flex;
   margin: 0;
