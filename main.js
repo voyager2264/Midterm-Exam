@@ -5,6 +5,8 @@
 // Copyright © 2018 W3C® (MIT, ERCIM, Keio, Beihang).
 
 window.onload = () => {
-
+    
 }
 
+function showWeather() {
+}

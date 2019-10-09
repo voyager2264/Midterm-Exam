@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Guided worksheet for GHC 2018: Developing Screen-Reader-Friendly Websites">
     <link rel="stylesheet" href="main.css">
+      <script src="/~phbrown/CSC335/AJAX-basics.js"></script>
     <script src="main.js"></script> 
   </head>
   <body>
@@ -21,7 +22,7 @@
 	    <ul class="datatarget">
 	      <li>Location: <span id="loc" class="datatarget"></span></li>
 	      <li>Temperature: <span id="temp" class="datatarget"></span>&deg; F</li>
-	      <li>Humidity: <span id="temp" class="datatarget"></span>%</li>
+	      <li>Humidity: <span id="humidity" class="datatarget"></span>%</li>
 	      <li>Forecast time: <span id="time" class="datatarget"></span></li>
 	      <li>Source: <a href="/~phbrown/CSC335/weather.php">weather.php</a>, 
 		using data
@@ -31,7 +32,7 @@
 	  </div>
 	  <div class="formholder">
 	    <form action="" method="get">
-	      <button class="button" onclick="showWeather();">Update the weather</button>
+	      <button type="button" class="button" onclick="showWeather();">Update the weather</button>
 	    </form>
 	  </div>
         </div>
